@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+    <div class="container border border-primary w-50 m-auto">
+        <h2>{{ ticket.event.event_name }} on {{ticket.event.event_date}}</h2>
+        <h5>Tickets For: {{ ticket.user.username }}</h5>
+        <h5>Section: {{ ticket.section }}</h5>
+        <h5>Number of Tickets: {{ ticket.number }}</h5>
+    </div>
+
+  
+  
+
+
+    
+{% endblock %}

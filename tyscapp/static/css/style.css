@@ -1,0 +1,32 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#body{
+  font-family: 'Emojis', Arial, Helvetica, sans-serif;
+  color: #00529F;
+}
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+  }
+
+
+#player{
+  width: 100px;
+  max-height: 100px;
+  
+
+}
+
+.table{
+ margin: auto;
+}
+#map {
+  height: 300px;
+  width: 100%;
+}
+

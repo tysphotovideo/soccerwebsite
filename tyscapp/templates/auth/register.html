@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+<div class="form-signin m-auto">
+  
+  <h1>Register</h1>
+  <form method="post" action="register" class="mb-3">
+    {% csrf_token %}
+    {{form.errors}}
+    <div class="mb-3">
+      <label for="exampleEmail" class="form-label" >Email address</label>
+      <input type="email" class="form-control" id="exampleEmail" aria-describedby="emailHelp" name="email">
+        We'll never share your email with anyone else.
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputUsername" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleInputUsername" name="username">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password1" name="password1">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="password2" name="password2">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

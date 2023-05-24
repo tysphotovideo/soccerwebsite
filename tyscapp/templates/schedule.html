@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="pb-4 mb-4">
+        Schedule
+    </h1>
+    
+    <table class="table w-75 table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">Who</th>
+                <th scope="col">When</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in all_events %}
+            <tr>
+                <td>{{ event.event_name }}</td>
+                <td>
+                    <div>
+                        {{ event.event_date }} @ {{ event.event_time }} 
+                    </div>
+                    <div>
+                        
+                            {% if user.is_authenticated %}
+        
+                              <a href="tickets" type="button" class="shadow btn btn-primary">Buy Tickets</a>
+                        
+                            {% else %}
+                              <a href="loginPage" type="button" class="shadow btn btn-primary">Login to Buy Tickets</a>
+                        
+                            {% endif %}
+
+                    
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container w-50 m-auto">
+
+    <form action="/edit_ticket/{{ticket.id}}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="user" value="{{request.user.id}}">
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+            </ul>
+        {% endif %}
+       
+        <div class="mb-3">
+            <select class="shadow-sm form-select" aria-label="Default select example" name="event_id">
+                <label for="exampleInputSection1" class="form-label">Select Game</label>
+                {% for event in all_events %}
+                {% if event.id == ticket.event.id %}
+                <option value="{{event.id}}"selected>{{event.event_name}}</option>
+                {% else %}
+                <option value="{{event.id}}">{{event.event_name}}</option>
+                {% endif %}
+                {% endfor %}
+
+                
+              </select>
+        </div>
+        <div class="mb-3">
+            <select class="form-select shadow-sm" aria-label="Default select example" name="section">
+                <label for="exampleInputSection1" class="form-label">Select Section</label>
+                <option value="1" name="section">One</option>
+                <option value="2" name="section">Two</option>
+                <option value="3" name="section">Three</option>
+              </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputTicket1" class="form-label">Number of Tickets</label>
+            <input type="number" min="1" class="shadow-sm form-control" id="exampleInputName1" name="number" value="{{ticket.number}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

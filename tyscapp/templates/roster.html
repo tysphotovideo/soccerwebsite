@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="container">
+    
+    <h1 class="pb-4 mb-4">
+        Roster
+    </h1>
+    <div class="container">
+
+        <table class="table w-75 table-hover table-borderless">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Player Name</th>
+                    <th scope="col">Position</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="{% static 'img/CR7.jpg' %}" class="shadow rounded float-start" alt="..." id="player"/>
+                    </td>
+                    <td>Cristiano Ronaldo</td>
+                    <td>ST</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/LM10.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Lionel Messi</td>
+                    <td>RW</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/KM.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Kylian Mbappe</td>
+                    <td>LW</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/YM.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Yunus Musah</td>
+                    <td>CAM</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/TA.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Tyler Adams</td>
+                    <td>CDM</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/WM.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Weston McKennie</td>
+                    <td>CDM</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/DA.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>David Alaba</td>
+                    <td>LB</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/RV.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Raphaël Varane</td>
+                    <td>CB</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/AR.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Antonio Rüdiger</td>
+                    <td>CB</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/KW.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Kyle Walker</td>
+                    <td>RB</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="{% static 'img/GD.jpg' %}" class="shadow rounded float-start" alt="..."id="player"/>
+                    </td>
+                    <td>Gianluigi Donnarumma</td>
+                    <td>GK</td>
+                </tr>
+                
+            </tbody>
+          </table>
+    </div>
+</div>
+
+{% endblock %}

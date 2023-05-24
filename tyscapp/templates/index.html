@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static%}
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active"
+        aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bg-image object-fit-cover " width="100%" style="height: 60vh;" aria-hidden="true" focusable="false"
+          src="{% static '/img/SF.jpg' %}">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Soldier Field</h1>
+            <p>Check out our beautiful new Stadium</p>
+            <p><a class="btn btn-lg btn-primary" href="/contact">Contact us!</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+       
+        <img class="opacity-75 bg-image object-fit-cover " width="100%" style="height: 60vh;" aria-hidden="true" focusable="false"
+          src="{% static '/img/CL.jpg' %}">
+        <div class="container">
+          <div class=" carousel-caption">
+            <h1>Meet Our Players</h1>
+            <p>The Worlds finest soccer players all in one squad </p>
+            <p><a class="btn btn-lg btn-primary" href="/roster">Roster</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bg-image object-fit-cover opacity-75" width="100%" style="height: 60vh;" aria-hidden="true" focusable="false"
+          src="{% static '/img/tick.jpg' %}">
+        <div class="container">
+          <div class="carousel-caption text-end text-primary ">
+            <h1>Come to Our Next Game</h1>
+            <p>The Greatest Club with the greatest fans. Now is the perfect opportunity to plan your next visit.</p>
+            <p><a class="btn btn-lg btn-secondary" href="/schedule">Schedule</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+    ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Realmadrid <span class="text-body-secondary">The Greatest Club on
+            Earth!</span></h2>
+        <p class="lead">Excellence is a hallmark of Real Madrid and has been a key part of our club since its foundation
+          in 1902 and applies to all areas of the club, including the professional, sporting and institutional aspects.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static '/img/RMOLD.jpg'%}" class="object-fit-cover bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+        style="height: 50vh" alt="">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Humility <span class="text-body-secondary">See for
+            yourself.</span></h2>
+        <p class="lead">
+          We firmly believe that humility is an essential characteristic as we seek to improve every day. Everything
+          that we achieve is the result of sacrifice and hard work, and humility enables us to avoid becoming
+          complacent. Real Madrid considers our opponents to be of equal merit in a showing of utmost respect and every
+          achievement represents a starting point to try and accomplish the next challenge.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        
+        <img src="{% static '/img/CRChamp.jpeg'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+        height="500" alt="">
+      </div>
+
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="container p-3">
+
+      <h1 class="text-center">
+        UNTIL THE END, COME ON REAL.
+      </h1>
+    </div>
+
+
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+</main>
+
+{% endblock %}
